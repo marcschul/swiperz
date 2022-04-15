@@ -1,6 +1,35 @@
-# Getting Started with Create React App
+# Swiperz
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A fun 2 player game which mimics connect 4, but sideways!
+
+Rules
+==
+Connect 4 sideways to win!
+
+To-Do List
+==
+- [x] Boilerplate app
+- [ ] Create board, 7x7, rows x columns
+- [ ] Players take turn adding pieces to a row on one of the sides
+- [ ] pieces stack beside each other
+- [ ] Game ends when no spaces left, or a player has four consecutive pieces on a diagonal, column, or row
+- [ ] Displays "player n won!" after game ends
+- [ ] Use relational database for back end
+- [ ] Two players see the board
+- [ ] Broswer does not need to refresh to see a player move / update pieces
+- [ ] create api for backend psql db
+- [ ] additional features, leaderboard, eg; red 1 : 2 Blue -> BLUE WINS!
+
+
+example board - x wins
+ 
+ 0. [ _ _ _ _ o x o ]
+ 1. [ o x x x x _ o ]
+ 2. [ x _ _ _ _ _ x ]
+ 3. [ x _ _ _ _ _ o ]
+ 4. [ o _ _ _ _ _ _ ]
+ 5. [ _ _ _ _ _ _ _ ]
+ 6. [ _ _ _ _ _ _ _ ]
 
 ## Available Scripts
 
