@@ -15,8 +15,6 @@ export default function Grid() {
       grid.push(currentRow);
   }
 
-  console.log('grid ===', grid)
-
   return (
     <div className="flex justify-center">
       <table>
