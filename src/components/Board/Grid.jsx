@@ -16,7 +16,7 @@ export default function Grid(props) {
   }
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center pb-10 text-slate-300 ">
       <table>
         <tbody className="m-">
           {grid.map((item, index) => {
