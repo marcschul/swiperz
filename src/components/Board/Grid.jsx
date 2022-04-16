@@ -38,7 +38,7 @@ export default function Grid(props) {
                       }
                     }
                     console.log(props.gameState)
-                  }}>L-button</td>
+                  }}>LB</td>
 
                 {/* ROW */}
                 <td key={`${index + '1'}`} >{item[1]}</td>
@@ -53,7 +53,7 @@ export default function Grid(props) {
                 {/* RIGHT BUTTON */}
                 <td key={`${index + '8'}`}  className="border-2" onClick={() => {
                     console.log('right button click', 'index ===', index); 
-                  }}>R-button</td>
+                  }}>RB</td>
 
               </tr>
             );
