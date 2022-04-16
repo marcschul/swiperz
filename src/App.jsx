@@ -22,7 +22,7 @@ function App() {
   });
 
   return (
-    <div className="bg-slate-500 text-slate-300 flex-col text-center mx-auto md:container md:mx-auto">
+    <div className="bg-slate-500 text-slate-300 flex-col text-center mx-auto md:container md:mx-auto xl:mt-20 rounded-lg xl:w-[900px] p-10 bg-gradient-to-r from-cyan-500 to-blue-500">
       <Header 
         player1={gameState.player1}
         player2={gameState.player2}
