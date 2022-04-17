@@ -53,8 +53,7 @@ function App() {
     <div className="flex justify-center items-center h-screen">
       <div className="bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg text-center">
         <Header 
-          player1={gameState.player1}
-          player2={gameState.player2}
+          currentPlayer={gameState.currentPlayer}
         />
         <Grid 
           gameState={gameState}
