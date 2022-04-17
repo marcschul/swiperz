@@ -8,11 +8,13 @@ export default function Grid(props) {
   const grid = [];
   
   for (let row = 0; row < GRID_ROW_LENGTH; row++) {
+
     const currentRow = [];
     for (let col = 0; col < GRID_COL_LENGTH; col++) {
       currentRow.push(<Node />);
     }
-      grid.push(currentRow);
+    grid.push(currentRow);
+
   }
 
   return (
@@ -29,10 +31,21 @@ export default function Grid(props) {
                     for (let i = 0; i < props.gameState.board[index].length; i++) {
                       if (!props.gameState.board[index][i]) {
                         const newBoard = [...props.gameState.board];
-                        newBoard[index][i] = true;
+                        newBoard[index][i] = props.gameState.currentPlayer;
+
+                        let newPlayer;
+                        if (props.gameState.currentPlayer === 1) {
+                          newPlayer = 2;
+                        }
+
+                        if (props.gameState.currentPlayer === 2) {
+                          newPlayer = 1;
+                        }
+                        
                         props.setGameState(prevState => ({
                           ...prevState,
-                          board: newBoard
+                          board: newBoard,
+                          currentPlayer: newPlayer
                         }))
                         break;
                       }
