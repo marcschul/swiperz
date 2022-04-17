@@ -1,6 +1,6 @@
 import Header from "./components/Header";
 import Grid from "./components/Board/Grid";
-import {useState} from 'react'
+import { useState, useEffect } from 'react';
 
 function App() {
 
@@ -20,6 +20,34 @@ function App() {
       [0, 0, 0, 0, 0, 0, 0]
     ]
   });
+
+  const checkWinner = function (gameState) {
+    const board = gameState.board;
+    let results = false;
+
+
+    for (const row of board) {
+
+      let nodeState = row[0];
+      // console.log(row[0])
+      for (const node of row) {
+        // if node 4x, winner
+        
+        if (nodeState === node) {
+          console.log('true')
+        }
+      }
+    }
+
+    console.log('board', board);
+    return results;
+  }
+
+  useEffect(() => {
+    // call pathfinding algorithm here to check for winner
+    checkWinner(gameState);
+  }, [gameState])
+  
 
   return (
     <div className="flex justify-center items-center h-screen">

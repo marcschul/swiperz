@@ -9,7 +9,7 @@ export default function Header(props) {
       <div className="flex justify-center text-2xl">
         <h2 className="p-2 text-red-500">{player1}</h2>
         <h2 className="p-2 font-extrabold text-slate-600"> VS </h2>
-        <h2 className="p-2 text-green-300">{player2}</h2>
+        <h2 className="p-2 text-green-500">{player2}</h2>
       </div>
     </div>
   )

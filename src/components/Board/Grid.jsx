@@ -26,7 +26,10 @@ export default function Grid(props) {
                 
                 {/* LEFT BUTTON */}
                 <td key={`${index + '0'}`} 
-                    className="font-paint text-slate-700 text-4xl p-0 m-0">
+                    className={props.gameState.currentPlayer === 1 ? 
+                    "font-paint text-slate-700 text-4xl p-0 m-0 hover:text-red-500" 
+                    : 
+                    "font-paint text-slate-700 text-4xl p-0 m-0 hover:text-green-500"}>
                     <button 
                     onClick={() => {
                     for (let i = 0; i < props.gameState.board[index].length; i++) {
@@ -55,7 +58,7 @@ export default function Grid(props) {
                   </button>
                   </td>
 
-                {/* ROW */}
+                {/* ROWS */}
                 <td key={`${index + '1'}`} >{item[0]}</td>
                 <td key={`${index + '2'}`} >{item[1]}</td>
                 <td key={`${index + '3'}`} >{item[2]}</td>
@@ -67,7 +70,10 @@ export default function Grid(props) {
 
                 {/* RIGHT BUTTON */}
                 <td key={`${index + '9'}`} 
-                    className="font-paint text-slate-700 text-4xl p-0 m-0">
+                    className={props.gameState.currentPlayer === 1 ? 
+                      "font-paint text-slate-700 text-4xl p-0 m-0 hover:text-red-500" 
+                      : 
+                      "font-paint text-slate-700 text-4xl p-0 m-0 hover:text-green-500"}>
                     <button 
                     onClick={() => {
                     for (let i = props.gameState.board[index].length - 1; i >= 0; i--) {
