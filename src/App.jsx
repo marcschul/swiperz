@@ -52,7 +52,7 @@ function App() {
 
   return (
     <div className="flex justify-center items-center h-screen">
-      <div className="bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg text-center lg:py-20 lg:px-40">
+      <div className="bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg text-center xl:p-8">
         <Header 
           currentPlayer={gameState.currentPlayer}
         />

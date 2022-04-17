@@ -27,9 +27,9 @@ export default function Grid(props) {
                 {/* LEFT BUTTON */}
                 <td key={`${index + '0'}`} 
                     className={props.gameState.currentPlayer === 1 ? 
-                    "font-paint text-slate-700 text-4xl p-0 m-0 hover:text-red-500" 
+                    "font-paint text-slate-700 text-4xl p-0 m-0 hover:text-red-500 xl:text-7xl" 
                     : 
-                    "font-paint text-slate-700 text-4xl p-0 m-0 hover:text-green-500"}>
+                    "font-paint text-slate-700 text-4xl p-0 m-0 hover:text-green-500 xl:text-7xl"}>
                     <button 
                     onClick={() => {
                     for (let i = 0; i < props.gameState.board[index].length; i++) {
@@ -71,9 +71,9 @@ export default function Grid(props) {
                 {/* RIGHT BUTTON */}
                 <td key={`${index + '9'}`} 
                     className={props.gameState.currentPlayer === 1 ? 
-                      "font-paint text-slate-700 text-4xl p-0 m-0 hover:text-red-500" 
+                      "font-paint text-slate-700 text-4xl p-0 m-0 hover:text-red-500 xl:text-7xl" 
                       : 
-                      "font-paint text-slate-700 text-4xl p-0 m-0 hover:text-green-500"}>
+                      "font-paint text-slate-700 text-4xl p-0 m-0 hover:text-green-500 xl:text-7xl"}>
                     <button 
                     onClick={() => {
                     for (let i = props.gameState.board[index].length - 1; i >= 0; i--) {
