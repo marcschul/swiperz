@@ -39,8 +39,6 @@ function App() {
         }
       }
     }
-
-    console.log('board', board);
     return results;
   }
 
