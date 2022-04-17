@@ -11,7 +11,7 @@ export default function Header(props) {
           "pt-2 pb-2 text-2xl text-red-500 xl:text-4xl xl:pb-6" 
           : 
           "pt-2 pb-2 text-2xl text-green-500 xl:text-4xl xl:pb-6"}> 
-          Player {currentPlayer}</h2>
+          Player {currentPlayer} add block</h2>
     </div>
   )
 }
