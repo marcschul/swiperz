@@ -1,5 +1,6 @@
 import Header from "./components/Header";
 import Grid from "./components/Board/Grid";
+import Footer from "./components/Footer";
 import { useState, useEffect } from 'react';
 
 function App() {
@@ -51,7 +52,7 @@ function App() {
 
   return (
     <div className="flex justify-center items-center h-screen">
-      <div className="bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg text-center">
+      <div className="bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg text-center lg:py-20 lg:px-40">
         <Header 
           currentPlayer={gameState.currentPlayer}
         />
@@ -59,6 +60,7 @@ function App() {
           gameState={gameState}
           setGameState={setGameState}
         />
+        <Footer />
       </div>
     </div>
   );
