@@ -11,7 +11,7 @@ export default function Grid(props) {
 
     const currentRow = [];
     for (let col = 0; col < GRID_COL_LENGTH; col++) {
-      currentRow.push(<Node />);
+      currentRow.push(<Node state={`${props.gameState.board[row][col]}`}/>);
     }
     grid.push(currentRow);
 
@@ -20,7 +20,7 @@ export default function Grid(props) {
   return (
     <div className="flex justify-center text-slate-300 ">
       <table>
-        <tbody className="m-">
+        <tbody>
           {grid.map((item, index) => {
             return (
               <tr key={`${index}`}>
@@ -54,13 +54,13 @@ export default function Grid(props) {
                   }}>LB</td>
 
                 {/* ROW */}
-                <td key={`${index + '1'}`} >{item[1]}</td>
-                <td key={`${index + '2'}`} >{item[2]}</td>
-                <td key={`${index + '3'}`} >{item[3]}</td>
-                <td key={`${index + '4'}`} >{item[4]}</td>
-                <td key={`${index + '5'}`} >{item[5]}</td>
-                <td key={`${index + '6'}`} >{item[6]}</td>
-                <td key={`${index + '7'}`} >{item[7]}</td>
+                <td key={`${index + '1'}`} >{item[0]}</td>
+                <td key={`${index + '2'}`} >{item[1]}</td>
+                <td key={`${index + '3'}`} >{item[2]}</td>
+                <td key={`${index + '4'}`} >{item[3]}</td>
+                <td key={`${index + '5'}`} >{item[4]}</td>
+                <td key={`${index + '6'}`} >{item[5]}</td>
+                <td key={`${index + '7'}`} >{item[6]}</td>
 
 
                 {/* RIGHT BUTTON */}
