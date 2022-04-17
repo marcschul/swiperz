@@ -29,16 +29,22 @@ function App() {
 
     for (const row of board) {
 
-      let nodeState = row[0];
-      // console.log(row[0])
+      let nodeState;
+      let nodeAccum = 0;
       for (const node of row) {
-        // if node 4x, winner
-        
-        if (nodeState === node) {
-          console.log('true')
+        // if node 4, winner
+        // console.log('nodeState', nodeState)
+        // console.log('node', node);
+        if (nodeState === node && nodeState !== 0) {
+          nodeAccum += 1;
+        } else {
+          nodeAccum = 0;
+          nodeState = node;
         }
+        console.log('nodeAccum', nodeAccum);
       }
     }
+
     return results;
   }
 

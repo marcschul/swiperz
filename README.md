@@ -10,14 +10,14 @@ Game Rules
 To-Do List
 ==
 - [x] Boilerplate app
-- [ ] Create board, 7x7, rows x columns
-- [ ] Players take turn adding pieces to a row on one of the sides
-- [ ] pieces stack beside each other
+- [x] Create board, 7x7, rows x columns
+- [x] Players take turn adding pieces to a row on one of the sides
+- [x] pieces stack beside each other
 - [ ] Game ends when no spaces left, or a player has four consecutive pieces on a diagonal, column, or row
 - [ ] Displays "player n won!" after game ends
 - [ ] Use relational database for back end
 - [ ] Two players see the board
-- [ ] Broswer does not need to refresh to see a player move / update pieces
+- [ ] Browser does not need to refresh to see a player move / update pieces
 - [ ] create api for backend psql db
 - [ ] additional features, leaderboard, eg; red 1 : 2 Blue -> BLUE WINS!
 
