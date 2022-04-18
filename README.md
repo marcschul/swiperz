@@ -15,10 +15,10 @@ To-Do List
 - [x] pieces stack beside each other
 - [ ] Game ends when no spaces left, or a player has four consecutive pieces on a diagonal, column, or row
 - [ ] Displays "player n won!" after game ends
-- [ ] Use relational database for back end
+- [x] Use relational database for back end
 - [ ] Two players see the board
-- [ ] Browser does not need to refresh to see a player move / update pieces
-- [ ] create api for backend psql db
+- [x] Browser does not need to refresh to see a player move / update pieces
+- [x] create api for backend psql db
 - [ ] additional features, leaderboard, eg; red 1 : 2 Blue -> BLUE WINS!
 
 

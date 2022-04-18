@@ -82,7 +82,7 @@ const checkDraw = function (gameState) {
 export default function useCheckWinner(gameState) {
 
   useEffect(() => {
-    // call pathfinding algorithm here to check for winner
+    // call pathfinding algorithms here to check for winner
     console.log(checkHorizontal(gameState));
     console.log(checkVertical(gameState));
     console.log(checkDiagonalRight(gameState));
