@@ -1,7 +1,8 @@
 import Header from "./components/Header";
 import Grid from "./components/Board/Grid";
 import Footer from "./components/Footer";
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import useCheckWinner from "./hooks/useCheckWinner";
 
 function App() {
 
@@ -21,38 +22,8 @@ function App() {
       [0, 0, 0, 0, 0, 0, 0]
     ]
   });
-
-  const checkWinner = function (gameState) {
-    const board = gameState.board;
-    let results = false;
-
-
-    for (const row of board) {
-
-      let nodeState;
-      let nodeAccum = 0;
-      for (const node of row) {
-        // if node 4, winner
-        // console.log('nodeState', nodeState)
-        // console.log('node', node);
-        if (nodeState === node && nodeState !== 0) {
-          nodeAccum += 1;
-        } else {
-          nodeAccum = 0;
-          nodeState = node;
-        }
-        console.log('nodeAccum', nodeAccum);
-      }
-    }
-
-    return results;
-  }
-
-  useEffect(() => {
-    // call pathfinding algorithm here to check for winner
-    checkWinner(gameState);
-  }, [gameState])
   
+  useCheckWinner(gameState);
 
   return (
     <div className="flex justify-center items-center h-screen">
