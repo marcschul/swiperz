@@ -7,6 +7,7 @@ export default function Grid(props) {
 
   const currentPlayer = props.appState.currentPlayer;
   const board = props.gameState.board;
+  const gameOver = props.appState.gameOver;
 
   const grid = [];
   
@@ -35,6 +36,8 @@ export default function Grid(props) {
                     "font-paint text-slate-700 text-4xl p-0 m-0 hover:text-green-500 xl:text-7xl"}>
                     <button 
                     onClick={() => {
+                    if (gameOver) return;
+
                     for (let i = 0; i < board[index].length; i++) {
                       if (!board[index][i]) {
                         const newBoard = [...board];
@@ -83,6 +86,8 @@ export default function Grid(props) {
                       "font-paint text-slate-700 text-4xl p-0 m-0 hover:text-green-500 xl:text-7xl"}>
                     <button 
                     onClick={() => {
+                    if (gameOver) return;
+                    
                     for (let i = board[index].length - 1; i >= 0; i--) {
                       if (!board[index][i]) {
                         const newBoard = [...board];

@@ -13,7 +13,7 @@ To-Do List
 - [x] Create board, 7x7, rows x columns
 - [x] Players take turn adding pieces to a row on one of the sides
 - [x] pieces stack beside each other
-- [ ] Game ends when no spaces left, or a player has four consecutive pieces on a diagonal, column, or row
+- [x] Game ends when no spaces left, or a player has four consecutive pieces on a diagonal, column, or row
 - [x] Displays "player n won!" after game ends
 - [x] Use relational database for back end
 - [ ] Two players see the board

@@ -13,7 +13,8 @@ const checkHorizontal = function (gameState, setAppState) {
           setAppState(prevState => ({
             ...prevState,
             message: `Player ${winner}`,
-            currentPlayer: winner
+            currentPlayer: winner,
+            gameOver: true
           }))
           return winner;
         }
@@ -35,7 +36,8 @@ const checkVertical = function (gameState, setAppState) {
           setAppState(prevState => ({
             ...prevState,
             message: `Player ${winner}`,
-            currentPlayer: winner
+            currentPlayer: winner,
+            gameOver: true
           }))
           return winner;   
         }
@@ -57,7 +59,8 @@ const checkDiagonalRight = function (gameState, setAppState) {
           setAppState(prevState => ({
             ...prevState,
             message: `Player ${winner}`,
-            currentPlayer: winner
+            currentPlayer: winner,
+            gameOver: true
           }))
           return winner;
         }
@@ -79,7 +82,8 @@ const checkDiagonalLeft = function (gameState, setAppState) {
           setAppState(prevState => ({
             ...prevState,
             message: `Player ${winner}`,
-            currentPlayer: winner
+            currentPlayer: winner,
+            gameOver: true
           }))
           return winner;
         }
@@ -100,8 +104,8 @@ const checkDraw = function (gameState, setAppState) {
   console.log(`Draw Match`)
   setAppState(prevState => ({
     ...prevState,
-    message: `No One`,
-    currentPlayer: 'no one'
+    message: `Nobody`,
+    gameOver: true
   }))
 }
 export default function useCheckWinner(gameState, setAppState) {
