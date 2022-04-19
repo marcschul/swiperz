@@ -5,13 +5,16 @@ export default function Grid(props) {
   const GRID_ROW_LENGTH = 7;
   const GRID_COL_LENGTH = 7;
 
+  const currentPlayer = props.appState.currentPlayer;
+  const board = props.gameState.board;
+
   const grid = [];
   
   for (let row = 0; row < GRID_ROW_LENGTH; row++) {
 
     const currentRow = [];
     for (let col = 0; col < GRID_COL_LENGTH; col++) {
-      currentRow.push(<Node state={`${props.gameState.board[row][col]}`}/>);
+      currentRow.push(<Node state={`${board[row][col]}`}/>);
     }
     grid.push(currentRow);
 
@@ -26,28 +29,32 @@ export default function Grid(props) {
                 
                 {/* LEFT BUTTON */}
                 <td key={`${index + '0'}`} 
-                    className={props.gameState.currentPlayer === 1 ? 
+                    className={currentPlayer === 1 ? 
                     "font-paint text-slate-700 text-4xl p-0 m-0 hover:text-red-500 xl:text-7xl" 
                     : 
                     "font-paint text-slate-700 text-4xl p-0 m-0 hover:text-green-500 xl:text-7xl"}>
                     <button 
                     onClick={() => {
-                    for (let i = 0; i < props.gameState.board[index].length; i++) {
-                      if (!props.gameState.board[index][i]) {
-                        const newBoard = [...props.gameState.board];
-                        newBoard[index][i] = props.gameState.currentPlayer;
+                    for (let i = 0; i < board[index].length; i++) {
+                      if (!board[index][i]) {
+                        const newBoard = [...board];
+                        newBoard[index][i] = currentPlayer;
 
                         let newPlayer;
-                        if (props.gameState.currentPlayer === 1) {
+                        if (currentPlayer === 1) {
                           newPlayer = 2;
                         }
-                        if (props.gameState.currentPlayer === 2) {
+                        if (currentPlayer === 2) {
                           newPlayer = 1;
                         }
                         
                         props.setGameState(prevState => ({
                           ...prevState,
-                          board: newBoard,
+                          board: newBoard
+                        }))
+
+                        props.setAppState(prevState => ({
+                          ...prevState,
                           currentPlayer: newPlayer
                         }))
                         break;
@@ -70,28 +77,32 @@ export default function Grid(props) {
 
                 {/* RIGHT BUTTON */}
                 <td key={`${index + '9'}`} 
-                    className={props.gameState.currentPlayer === 1 ? 
+                    className={currentPlayer === 1 ? 
                       "font-paint text-slate-700 text-4xl p-0 m-0 hover:text-red-500 xl:text-7xl" 
                       : 
                       "font-paint text-slate-700 text-4xl p-0 m-0 hover:text-green-500 xl:text-7xl"}>
                     <button 
                     onClick={() => {
-                    for (let i = props.gameState.board[index].length - 1; i >= 0; i--) {
-                      if (!props.gameState.board[index][i]) {
-                        const newBoard = [...props.gameState.board];
-                        newBoard[index][i] = props.gameState.currentPlayer;
+                    for (let i = board[index].length - 1; i >= 0; i--) {
+                      if (!board[index][i]) {
+                        const newBoard = [...board];
+                        newBoard[index][i] = currentPlayer;
 
                         let newPlayer;
-                        if (props.gameState.currentPlayer === 1) {
+                        if (currentPlayer === 1) {
                           newPlayer = 2;
                         }
-                        if (props.gameState.currentPlayer === 2) {
+                        if (currentPlayer === 2) {
                           newPlayer = 1;
                         }
                         
                         props.setGameState(prevState => ({
                           ...prevState,
-                          board: newBoard,
+                          board: newBoard
+                        }))
+
+                        props.setAppState(prevState => ({
+                          ...prevState,
                           currentPlayer: newPlayer
                         }))
                         break;

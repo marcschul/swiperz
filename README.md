@@ -14,7 +14,7 @@ To-Do List
 - [x] Players take turn adding pieces to a row on one of the sides
 - [x] pieces stack beside each other
 - [ ] Game ends when no spaces left, or a player has four consecutive pieces on a diagonal, column, or row
-- [ ] Displays "player n won!" after game ends
+- [x] Displays "player n won!" after game ends
 - [x] Use relational database for back end
 - [ ] Two players see the board
 - [x] Browser does not need to refresh to see a player move / update pieces
