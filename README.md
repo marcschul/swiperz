@@ -8,6 +8,10 @@ Game Rules
 - Game will declare a tie if no spaces left
 - Each player takes turns placing a block on either side of the board
 
+Screenshot
+==
+!["Swiperz"](https://github.com/marcschul/swiperz/blob/main/public/screenshots/swiperz.png?raw=true)
+
 To-Do List
 ==
 - [x] Boilerplate app
