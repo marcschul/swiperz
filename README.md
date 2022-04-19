@@ -6,6 +6,7 @@ Game Rules
 ==
 - Connect 4 in a row, column or diagonally to win!
 - Game will declare a tie if no spaces left
+- Each player takes turns placing a block on either side of the board
 
 To-Do List
 ==

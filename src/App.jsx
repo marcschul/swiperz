@@ -1,7 +1,7 @@
 import Header from "./components/Header";
 import Grid from "./components/Board/Grid";
 import Footer from "./components/Footer";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import useCheckWinner from "./hooks/useCheckWinner";
 
 function App() {
@@ -27,6 +27,11 @@ function App() {
   });
   
   useCheckWinner(gameState, setAppState);
+
+  useEffect(() => {
+
+  }, [])
+  
 
   return (
     <div className="flex justify-center items-center h-screen">
