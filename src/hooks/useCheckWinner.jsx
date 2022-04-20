@@ -117,11 +117,11 @@ export default function useCheckWinner(gameState, setAppState) {
 
   useEffect(() => {
     // call pathfinding algorithms here to check for winner
-    console.log(checkHorizontal(gameState, setAppState));
-    console.log(checkVertical(gameState, setAppState));
-    console.log(checkDiagonalRight(gameState, setAppState));
-    console.log(checkDiagonalLeft(gameState, setAppState));
-    console.log(checkDraw(gameState, setAppState));    
+    checkHorizontal(gameState, setAppState);
+    checkVertical(gameState, setAppState);
+    checkDiagonalRight(gameState, setAppState);
+    checkDiagonalLeft(gameState, setAppState);
+    checkDraw(gameState, setAppState);    
   }, [gameState])
 
 }

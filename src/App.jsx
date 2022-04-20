@@ -1,9 +1,8 @@
 import Header from "./components/Header";
 import Grid from "./components/Board/Grid";
 import Footer from "./components/Footer";
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import useCheckWinner from "./hooks/useCheckWinner";
-import axios from 'axios';
 
 function App() {
 
@@ -28,11 +27,6 @@ function App() {
   });
   
   useCheckWinner(gameState, setAppState);
-
-  useEffect(() => {
-    axios.get('/json').then((x) => {console.log(x.data[x.data.length - 1])}).catch(() => {console.log('axios error')})
-  }, [])
-  
 
   return (
     <div className="flex justify-center items-center h-screen">

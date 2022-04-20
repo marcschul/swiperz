@@ -63,7 +63,6 @@ export default function Grid(props) {
                         break;
                       }
                     }
-                    console.log(props.gameState)
                   }}>+
                   </button>
                   </td>
@@ -113,7 +112,6 @@ export default function Grid(props) {
                         break;
                       }
                     }
-                    console.log(props.gameState)
                   }}>+
                   </button>
                   </td>
