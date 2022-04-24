@@ -110,11 +110,6 @@ const checkDraw = function (gameState, setAppState) {
 }
 export default function useCheckWinner(gameState, setAppState) {
 
-  // setGameState(prevState => ({
-  //   ...prevState,
-  //   message: 'Player Wins'
-  // }))
-
   useEffect(() => {
     // call pathfinding algorithms here to check for winner
     checkHorizontal(gameState, setAppState);

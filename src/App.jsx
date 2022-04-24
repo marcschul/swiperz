@@ -8,7 +8,6 @@ import { useState, useEffect } from 'react';
 
 function App() {
 
-  
   const [appState, setAppState] = useState({
     player1: 'Player1',
     player2: 'Player2',
@@ -29,32 +28,7 @@ function App() {
     ]
   });
 
-  
   useCheckWinner(gameState, setAppState);
-
-  // useEffect(() => {
-  //   const getUpdate = async () => {
-  //     try {
-  //       const response = await axios.post(
-  //         `/api/conversations/messages`,
-  //         { activeFriend: activeFriend, topicSelected: topicSelected },
-  //         jwt
-  //       );
-  //       setMessages(response.data);
-  //     } catch (err) {
-  //       console.log(err);
-  //     }
-  //   };
-  //   getMessages();
-
-  //   const reqInterval = setInterval(() => {
-  //     getMessages();
-  //   }, 1000);
-
-  //   return () => {
-  //     clearInterval(reqInterval);
-  //   };
-  // }, [activeFriend, topicSelected]);
 
   useEffect(() => {
     const getUpdate = async () => {
@@ -75,11 +49,12 @@ function App() {
         }));
       })
     }
+    
     getUpdate();
 
     const reqInterval = setInterval(() => {
       getUpdate();
-    }, 250);
+    }, 1000);
 
     return () => {
       clearInterval(reqInterval);

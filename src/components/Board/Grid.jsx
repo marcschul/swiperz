@@ -1,6 +1,6 @@
 import Node from "./Node"
 import axios from 'axios';
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 export default function Grid(props) {
 
@@ -26,26 +26,6 @@ export default function Grid(props) {
       console.log(error);
     })
   }, [gameState, appState])
-
-  // useEffect(() => {
-  //   axios.get('/games')
-  //   .then((response) => {
-  //     console.log('GETTING RESPONSE...', response);
-  //     setAppState(prevState => ({
-  //       ...prevState,
-  //       player1: response.data[1],
-  //       player2: response.data[2],
-  //       currentPlayer: JSON.parse(response.data[3]),
-  //       gameOver: JSON.parse(response.data[4]),
-  //       message: response.data[5],
-  //     }));
-  //     setGameState(prevState => ({
-  //       ...prevState,
-  //       board: response.data[6],
-  //     }));
-  //   })
-  // }, [update])
-  
 
   const grid = [];
   
