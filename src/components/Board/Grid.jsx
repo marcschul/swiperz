@@ -1,4 +1,6 @@
 import Node from "./Node"
+import axios from 'axios';
+import { useEffect } from "react";
 
 export default function Grid(props) {
 
@@ -8,6 +10,20 @@ export default function Grid(props) {
   const currentPlayer = props.appState.currentPlayer;
   const board = props.gameState.board;
   const gameOver = props.appState.gameOver;
+  const gameState = props.gameState;
+  const appState = props.appState;
+
+  useEffect(() => {
+    axios.put('/games', {
+      gameState,
+      appState
+    }).then((response) => {
+      console.log('PUT RESPONSE ===', response);
+    }).catch((error) => {
+      console.log(error);
+    })
+  }, [gameState, appState])
+  
 
   const grid = [];
   
