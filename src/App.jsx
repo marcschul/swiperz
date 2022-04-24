@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import Grid from "./components/Board/Grid";
 import Footer from "./components/Footer";
+import Games from "./components/Games";
 import { useState } from 'react';
 import useCheckWinner from "./hooks/useCheckWinner";
 
@@ -9,7 +10,7 @@ function App() {
   const [appState, setAppState] = useState({
     player1: 'Player1',
     player2: 'Player2',
-    currentPlayer: 1,
+    currentPlayer: 0,
     gameOver: false,
     message: 'SWIPERZ',
   });
@@ -35,13 +36,17 @@ function App() {
           currentPlayer={appState.currentPlayer}
           message={appState.message}
         />
-        <Grid 
+        {appState.currentPlayer !== 0 ? <Grid 
           gameState={gameState}
           setGameState={setGameState}
           appState={appState}
           setAppState={setAppState}
-        />
-        <Footer />
+        /> : 
+        <Games 
+          setAppState={setAppState}
+        />}
+
+          <Footer />
       </div>
     </div>
   );
