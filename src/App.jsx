@@ -7,6 +7,7 @@ import useCheckWinner from "./hooks/useCheckWinner";
 
 function App() {
 
+  
   const [appState, setAppState] = useState({
     player1: 'Player1',
     player2: 'Player2',
@@ -27,8 +28,9 @@ function App() {
     ]
   });
   
+  console.log('currentPlayer...', appState.currentPlayer)
   useCheckWinner(gameState, setAppState);
-
+  
   return (
     <div className="flex justify-center items-center h-screen">
       <div className="bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg text-center xl:p-8">
@@ -43,6 +45,9 @@ function App() {
           setAppState={setAppState}
         /> : 
         <Games 
+          gameState={gameState}
+          setGameState={setGameState}
+          appState={appState}
           setAppState={setAppState}
         />}
 
