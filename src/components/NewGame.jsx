@@ -12,6 +12,7 @@ export default function NewGame(props) {
   return (
     <div>
       <button onClick={() => {
+        localStorage.clear();
         localStorage.setItem('player1', 1)
         
         axios.post('/games', {})

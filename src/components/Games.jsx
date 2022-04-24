@@ -20,7 +20,10 @@ export default function Games(props) {
           appState={appState}
           setAppState={setAppState}
         />
-        <JoinGame />
+        <JoinGame 
+          setGameState={setGameState}
+          setAppState={setAppState}
+        />
       </div>
     </div>
   )
