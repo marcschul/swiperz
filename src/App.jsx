@@ -2,8 +2,8 @@ import Header from "./components/Header";
 import Grid from "./components/Board/Grid";
 import Footer from "./components/Footer";
 import Games from "./components/Games";
-import { useState } from 'react';
 import useCheckWinner from "./hooks/useCheckWinner";
+import { useState } from 'react';
 
 function App() {
 
@@ -28,7 +28,9 @@ function App() {
     ]
   });
   
-  console.log('currentPlayer...', appState.currentPlayer)
+  console.log('appState...', appState);
+  console.log('gameState...', gameState)
+
   useCheckWinner(gameState, setAppState);
   
   return (

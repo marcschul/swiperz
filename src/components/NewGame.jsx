@@ -1,46 +1,35 @@
-import {useEffect, useState} from 'react';
 import axios from 'axios';
+import { useNavigate } from "react-router-dom";
+
 
 export default function NewGame(props) {
+
+  const navigate = useNavigate()
   
-  const setAppState = props.setAppState;
   const setGameState = props.setGameState;
-  const gameState = props.gameState;
-  const appState = props.appState;
-
-  // const [newGame, setNewGame] = useState(false);
-
-  // useEffect(() => {
-  //   axios.post('/games', {
-  //     gameState,
-  //     appState
-  //   })
-  //   .then(function (response) {
-  //     console.log('axios response...',response);
-  //   })
-  //   .catch(function (error) {
-  //     console.log(error);
-  //   });
-  //   console.log('newGame', newGame)
-  // }, [newGame])
-  
+  const setAppState = props.setAppState;
 
   return (
     <div>
       <button onClick={() => {
         localStorage.setItem('player1', 1)
-        // setNewGame(!newGame)
-        setAppState(prevState => ({
-          ...prevState,
-          currentPlayer: 1
-        }));
-
-        axios.post('/games', {
-          gameState,
-          appState
-        })
+        
+        axios.post('/games', {})
         .then(function (response) {
-          console.log('axios response...',response);
+          const gameId = response.data[0]
+          navigate(`game/${gameId}`);
+          setAppState(prevState => ({
+            ...prevState,
+            player1: response.data[1],
+            player2: response.data[2],
+            currentPlayer: JSON.parse(response.data[3]),
+            gameOver: JSON.parse(response.data[4]),
+            message: response.data[5],
+          }));
+          setGameState(prevState => ({
+            ...prevState,
+            board: response.data[6],
+          }));
         })
         .catch(function (error) {
           console.log(error);
