@@ -1,5 +1,4 @@
 import React from 'react'
-import JoinGame from './JoinGame'
 import NewGame from './NewGame'
 
 export default function Games(props) {
@@ -18,10 +17,6 @@ export default function Games(props) {
           gameState={gameState}
           setGameState={setGameState}
           appState={appState}
-          setAppState={setAppState}
-        />
-        <JoinGame 
-          setGameState={setGameState}
           setAppState={setAppState}
         />
       </div>

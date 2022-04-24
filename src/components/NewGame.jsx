@@ -10,7 +10,7 @@ export default function NewGame(props) {
   const setAppState = props.setAppState;
 
   return (
-    <div>
+    <div className="text-white">
       <button onClick={() => {
         localStorage.clear();
         localStorage.setItem('player1', 1)
@@ -35,7 +35,7 @@ export default function NewGame(props) {
         .catch(function (error) {
           console.log(error);
         });
-      }}>New</button>
+      }}>New Game ?</button>
     </div>
   )
 }
