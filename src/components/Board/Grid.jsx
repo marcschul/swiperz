@@ -18,9 +18,6 @@ export default function Grid(props) {
         gameState,
         appState,
       })
-      .then((response) => {
-        console.log("PUT RESPONSE ===", response);
-      })
       .catch((error) => {
         console.log(error);
       });
