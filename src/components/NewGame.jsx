@@ -37,7 +37,7 @@ export default function NewGame(props) {
             });
         }}
       >
-        Loading...
+        New Game?
       </button>
     </div>
   );
